@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block contenido %}
+{% load static %}
+<body>
+    <div class="display-1 text-center">
+        <span>Equipo: {{ equipo.nombre }}</span><br>
+        <span>Año de creación: {{ equipo.anio_creacion }}</span><br>
+        <span>Campeón: {% if equipo.campeon == 1 %}
+            <span>Si</span><br/><br/>
+            <img src="{% static 'img/copa.jpg' %}">
+            {% else %}
+            <span>No</span><br>
+            {% endif %}</span><br>
+    </div>
+
+</body>
+{% endblock %}
